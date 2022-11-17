@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Online Bookstore</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Online Book Store</h2>
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-bordered table-striped">
+    
+    <tbody id="myTable">
+        <tr>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Year Published</th>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Da Vinci Code </td>
+            <td>Brown, Dan</td>
+            <td>March 18, 2003</td>
+            <td><button>Add to Cart</button> <button>Add to Wishlist</button> <button> Checkout</button></td>
+          </tr>
+          <tr>
+            <td>Harry Potter and the Deathly Hallows</td>
+            <td>Rowling, J.K.</td>
+            <td>July 21, 2007</td>
+            <td><button>Add to Cart</button> <button>Add to Wishlist</button> <button> Checkout</button></td>
+          </tr>
+          <tr>
+            <td>Harry Potter and the Philosopher's Stone</td>
+            <td>Rowling, J.K.</td>
+            <td>June 26, 1997</td>
+            <td><button>Add to Cart</button> <button>Add to Wishlist</button> <button> Checkout</button></td>
+          </tr>
+          <tr>
+            <td>Harry Potter and the Order of the Phoenix</td>
+            <td>Rowling, J.K.</td>
+            <td>June 21, 2003</td>
+            <td><button>Add to Cart</button> <button>Add to Wishlist</button> <button> Checkout</button></td>
+          </tr>
+          <tr>
+            <td>Fifty Shades of Grey</td>
+            <td>James, E. L.</td>
+            <td>May 25, 2011</td>
+            <td><button>Add to Cart</button> <button>Add to Wishlist</button> <button> Checkout</button></td>
+          </tr>
+          <tr>
+            <td>Harry Potter and the Goblet of Fire</td>
+            <td>Rowling, J.K.</td>
+            <td>July 8, 2000</td>
+            <td><button>Add to Cart</button> <button>Add to Wishlist</button> <button> Checkout</button></td>
+          </tr>
+          <tr>
+            <td>Harry Potter and the Chamber of Secrets</td>
+            <td>Rowling, J.K.</td>
+            <td>July 2, 1998</td>
+            <td><button>Add to Cart</button> <button>Add to Wishlist</button> <button> Checkout</button></td>
+          </tr>
+          <tr>
+            <td>Harry Potter and the Prisoner of Azkaban</td>
+            <td>Rowling, J.K.</td>
+            <td>July 8, 1999</td>
+            <td><button>Add to Cart</button> <button>Add to Wishlist</button> <button> Checkout</button></td>
+          </tr>
+          <tr>
+            <td>Angels and Demons</td>
+            <td>Brown, Dan</td>
+            <td>May 2000</td>
+            <td><button>Add to Cart</button> <button>Add to Wishlist</button> <button> Checkout</button></td>
+          </tr>
+          <tr>
+            <td>Harry Potter and the Half-blood Prince:Children's Edition</td>
+            <td>Rowling, J.K.</td>
+            <td>July 16, 2009</td>
+            <td><button>Add to Cart</button> <button>Add to Wishlist</button> <button>Checkout</button></td>
+          </tr>
+    </tbody>
+  </table>
+  
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>

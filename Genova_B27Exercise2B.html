@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+
+<head>
+ 
+
+    <title>Personal Information</title>
+    <style>
+        .body {
+            margin-left: auto;
+            margin-right:auto;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .name {
+            text-align: center;
+        }
+    </style>
+</head>
+ 
+
+<body class=". body">
+ 
+
+    <h1 class=". name">Check Out Details</h1>
+ 
+    <h3 class=". name">Fillout the Require Infomation</h3>
+ 
+    <form action="#" method="get">
+        <fieldset class=". name">
+            <legend>Personal Details</legend>
+
+            <p>
+                <label>First name : <input name="firstName" required/></label>
+            </p>
+ 
+            <p>
+                <label>Last name : <input name="lastName" required/></label>
+            </p>
+ 
+
+            <p>
+                Gender :
+                <label><input type="radio" name="gender"
+                    value="male" /> Male</label>
+
+ 
+                <label><input type="radio" name="gender"
+                    value="female" /> Female</label>
+            </p>
+ 
+            <p>
+                <label>Email : <input type="email"
+                    name="email" required/></label>
+            </p>
+ 
+            <p>
+                <label>Date of Birth : <input type="date"
+                    name="birthDate"></label>
+            </p>
+                
+            
+                <label>Address :
+                    <br />
+                    <textarea name="address" cols="30"
+                        rows="3" required></textarea>
+                </label>
+            </p>
+        </p>
+        <label for="payment-method">Choose Payment Method:</label>
+        <br>
+        <input list="browsers" name="browser" id="browser">
+        <datalist id="browsers">
+          <option value="Cash on Delivery">
+          <option value="Pay with Creditcard">
+          <option value="Pay with E-wallet">
+          <option value="">
+          <option value="">
+    <p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+
+        </fieldset>
+    </form>
+</body>
+ 
+</html>
