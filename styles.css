@@ -43,12 +43,12 @@ nav {
   background-color:rgb(255, 255, 255);
   margin: 5px;
 }
-@media (max-width:1020) {
+@media screen and (max-width:1020) {
     .nav-links{
         width: 50%;
     }
 }
-@media (min-width:768px){
+@media screen and (min-width:768px){
     body {
         overflow-x: hidden;
     }
@@ -73,4 +73,14 @@ nav {
 }
 .nav-active{
     transform: translateX(0%);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform:translateX(50px)
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
